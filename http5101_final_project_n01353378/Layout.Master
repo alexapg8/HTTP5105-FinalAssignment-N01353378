@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.Master.cs" Inherits="http5101_final_project_n01353378.Layout" %>
+<%@ Register Src="~/ListPages.ascx" TagName="ListPages" TagPrefix="asp"%>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Alexapress</title>
+    <link rel="stylesheet" type="text/css" href="/Content/Style.css" />
+</head>
+<body>
+    <header>
+        <div class="cwidth">
+          <h1 id="layout_name">Alexapress</h1>
+            <h3><a href="ManagePages.aspx">Manage Pages</a></h3>
+              <div class="listnavigation">
+                    <asp:ListPages runat="server"></asp:ListPages>
+              </div>
+        </div>
+    </header>
+    <div class="cwidth">
+        <form id="form_pages" runat="server">
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+    </div>
+    <footer>
+        <div class="footer_listnavigation">
+            <asp:ListPages runat="server"></asp:ListPages>
+        </div>
+    </footer>
+</body>
+</html>
